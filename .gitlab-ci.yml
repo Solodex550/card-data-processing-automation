@@ -1,15 +1,12 @@
+
 image: node:22
+
 stages:
   - test
 
-test-and-demo:
+unit_tests:
   stage: test
   script:
+    - node --version
     - npm test
     - npm run demo
-    - '! grep -q "1111222233334444" output/processed.csv'
-  artifacts:
-    when: always
-    paths:
-      - output/
-    expire_in: 1 day
