@@ -1,0 +1,8 @@
+.git
+.github
+.gitlab-ci.yml
+node_modules
+output
+*.zip
+.env
+coverage

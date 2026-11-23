@@ -1,0 +1,14 @@
+{
+  "name": "automation-interview-demo",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Synthetic data validation and masking ETL for VS Code, GitHub, GitLab, and Docker demonstrations",
+  "engines": {"node": ">=22.6.0"},
+  "scripts": {
+    "test": "node --experimental-strip-types --test tests/*.test.ts",
+    "demo": "node --experimental-strip-types src/cli.ts --input examples/source.csv --output output/processed.csv --audit output/audit.json",
+    "demo:bad": "node --experimental-strip-types src/cli.ts --input examples/invalid.csv --output output/invalid.csv --audit output/invalid.json"
+  },
+  "dependencies": {}
+}

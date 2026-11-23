@@ -1,0 +1,16 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug daily data update",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["--experimental-strip-types"],
+      "program": "${workspaceFolder}/src/cli.ts",
+      "args": ["--input", "examples/source.csv", "--output", "output/processed.csv", "--audit", "output/audit.json"],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal"
+    }
+  ]
+}

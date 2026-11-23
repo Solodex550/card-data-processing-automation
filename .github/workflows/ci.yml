@@ -1,0 +1,25 @@
+name: Tests and Docker build
+on:
+  push:
+  pull_request:
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Unit tests
+        run: npm test
+      - name: Offline demo run
+        run: npm run demo
+      - name: Confirm masked output
+        run: |
+          ! grep -q '1111222233334444' output/processed.csv
+  docker:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build image (do not publish)
+        run: docker build -t automation-interview-demo:ci .
