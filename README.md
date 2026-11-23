@@ -1,6 +1,5 @@
-# Automation Interview Demo — VS Code / GitHub / GitLab / Docker
-
-A **synthetic, independent** TypeScript/Node.js data-processing mini-project for software developer screen-sharing demonstrations. Its generic extract/validate/mask/report flow resembles many UiPath-style ETL automations, but **does not include the user's employer-specific workflow, interfaces, SQL, transaction formats, credentials, or real customer information**. It is not a live banking integration.
+# card-data-processing-automation
+A **synthetic, independent** TypeScript/Node.js data-processing mini-project. Its generic extract/validate/mask/report flow resembles many UiPath-style ETL automations, but **does not include the user's employer-specific workflow, interfaces, SQL, transaction formats, credentials, or real customer information**. It is not a live banking integration.
 
 ## What it demonstrates
 
